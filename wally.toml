@@ -1,0 +1,15 @@
+[package]
+description = "A collection of iterators for Luau."
+license = "MIT"
+name = "howmanysmall/iterators"
+realm = "shared"
+registry = "https://github.com/UpliftGames/wally-index"
+version = "0.1.0"
+exclude = [
+	"docs", ".moonwave", "test",
+	"Iterators.rbxm", "Iterators.rbxmx", "BuildIterators.lua",
+	"changelog.md", "README.md", ".styluaignore", ".gitignore",
+	"foreman.toml", "Luau.toml", "moonwave.toml", "selene.toml", "stylua.toml", "testez-companion.toml", "testez.toml"
+]
+
+[dependencies]

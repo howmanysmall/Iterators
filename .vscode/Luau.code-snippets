@@ -1,0 +1,49 @@
+{
+	"Class": {
+		"body": [
+			"local ${1:ClassName} = {}",
+			"$1.ClassName = \"$1\"",
+			"$1.__index = $1",
+			"",
+			"function $1.new()",
+			"\treturn setmetatable({}, $1)",
+			"end",
+			"",
+			"function $1:__tostring()",
+			"\treturn \"$1\"",
+			"end",
+			"",
+			"export type $1 = typeof($1.new())",
+			"table.freeze($1)",
+			"return $1",
+			"",
+		],
+
+		"description": "Creates a new Luau class.",
+		"prefix": ["class", "luauclass"],
+	},
+
+	"random": {
+		"body": [
+			"local RandomLib = Random.new(os.clock() % 1 * 1E7)",
+			"local NextInteger = RandomLib.NextInteger",
+			"local NextNumber = RandomLib.NextNumber",
+		],
+
+		"description": "Random shorthand",
+		"prefix": ["random"],
+	},
+
+	"RaycastParams": {
+		"body": [
+			"local ${1:Parameters} = RaycastParams.new()",
+			"$1.CollisionGroup = \"${2:}\"",
+			"$1.FilterDescendantsInstances = ${3:FilterDescendantsInstances}",
+			"$1.FilterType = Enum.RaycastFilterType.${4:Blacklist}",
+			"$1.IgnoreWater = ${5:false}",
+		],
+
+		"description": "Creates a new RaycastParams object.",
+		"prefix": ["RaycastParams"],
+	},
+}

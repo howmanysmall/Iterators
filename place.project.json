@@ -1,0 +1,14 @@
+{
+	"name": "Iterators",
+	"tree": {
+		"$className": "DataModel",
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"$ignoreUnknownInstances": true,
+			"Iterators": {
+				"$path": "src",
+				"$ignoreUnknownInstances": true
+			}
+		}
+	}
+}
